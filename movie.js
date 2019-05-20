@@ -14,31 +14,32 @@ $("button").click(function(){
     var year=$("#Year").val();
     var rating=$("#Rating").val();
     var criticRating=$("").val();
-    var baseUrl="https://www.omdbapi.com/?"
+    var baseUrl="https://www.omdbapi.com/?r=json"
     var Parameters="";
-    var apiKey="apikey=67e25254";
-if (title=""){
-    $("#error").text("lolololol type a name looooooooser");
+    var apiKey="&apikey=67e25254";
+    var url="";
+if (title!==""){
+    var Parameters=Parameters+"&t="+title;
 }
-else if(genre!==""){
-    
+if(genre!==""){
+   var Parameters= Parameters+
 }
-else if(length!==""){
-    
+if(length!==""){
+    var Parameters=Parameters+"&"+length;
 }
-else if(year!==""){
-    
+if(year!==""){
+    var Parameters=Parameters+"&y="+year;
 }
-else if(rating!==""){
-    
+if(rating!==""){
+    var Parameters=Parameters+"&"+title;
 }
-else if(criticRating!==""){
-    
+if(criticRating!==""){
+    var Parameters=Parameters+"&"+title;
 }
-else if(baseUrl!==""){
-    
+ if(baseUrl!==""){
+    var Parameters=Parameters+"&"+title;
 }
-else if(Parameters!==""){
+if(Parameters!==""){
     
 }
 $.ajax({
